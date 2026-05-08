@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-mono: "Inter", monospace;
+  
+  --color-cream: #f4efea;
+  --color-cream-light: #fbf9f6;
+  --color-brown-900: #2b1f14;
+  --color-brown-800: #3c2a1c;
+  --color-brown-600: #5c4431;
+  --color-brown-300: #cca584;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-brown-900 antialiased selection:bg-brown-300 selection:text-white;
+  }
+}
+
+.oval-mask {
+  mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
